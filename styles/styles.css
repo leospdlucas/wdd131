@@ -1,3 +1,11 @@
+:root{
+    --heading-background-color: #f06;
+    --heading-text-color: #333;
+    --heading-font: 'Monserrat', Helvetica, sans-serif;
+    --padding: 1rem;
+    --border: 1px solid rgba(0,0,0,0.1);
+}
+
 nav{
     background-color: steelblue;
     padding: 10px;
@@ -10,7 +18,10 @@ nav a {
 }
 
 h1 {
-    color: steelblue;
+    background-color: var(--heading-background-color);
+    color: var(--heading-text-color);
+    font-family: var(--heading-font);
+    padding: var(--padding);
 }
 
 img {
@@ -38,13 +49,9 @@ main img {
 }
 
 aside {
-    width: 20rem;
-    margin: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
-    text-align: center;
+    margin: 10px;
+    padding: var(--padding);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 aside img {
