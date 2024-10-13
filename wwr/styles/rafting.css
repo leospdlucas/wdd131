@@ -1,0 +1,194 @@
+/* Defining color variables */
+:root {
+    --primary-color: #01161E;
+    --secondary-color: #124559;
+    --tertiary-color: #dda150;
+    --accent-color: #dda150;     
+    --accent2-color: #eee0cb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*Text Font*/
+.protest-strike-regular {
+    font-family: "Protest Strike", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.lora {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    font-family: 'Lora', serif;
+    color: var(--primary-color); 
+    background-color: var(--accent2-color);
+    line-height: 1.6;
+}
+
+/* Styles for the header */
+header {
+    background-color: var(--secondary-color); 
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+/* Nav */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 700;
+}
+/* Mouse hovering over...*/
+nav a:hover {
+    color: var(--tertiary-color);
+    text-decoration: underline;
+}
+
+/* Search Box */
+.search-box {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 5px;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.search-button {
+    padding: 5px 10px;
+    background-color: var(--tertiary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: var(--accent-color);
+}
+
+/* Hero */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 10px;
+    left: 400px;
+    font-size: 4rem;
+    font-family: "Protest Strike", sans-serif; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    padding: 10px;
+    border-radius: 5px;
+}
+
+article {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    max-width: 800px;
+    background-color: var(--tertiary-color); 
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--primary-color);
+}
+
+article img {
+    float: right;
+    margin-left: 15px;
+    max-width: 150px;
+}
+
+/* Sections */
+section {
+    padding: 40px 20px;
+}
+
+/* Applying Protest Strike font */
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    font-family: "Protest Strike", sans-serif;
+    color: var(--secondary-color); 
+}
+
+/* Applying Lora font*/
+section p {
+    font-family: 'Lora', serif;
+    font-weight: 400; 
+    color: var(--primary-color);
+}
+
+section img {
+    max-width: 150px;
+    margin: 5px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color); 
+    padding: 20px;
+    text-align: center;
+    color: var(--accent2-color); 
+}
+
+footer p {
+    color: var(--accent2-color); 
+}
+
+.social-media-icons a {
+    margin: 0 10px;
+}
+
+.social-media-icons img {
+    width: 30px;
+    height: auto;
+}
+
+.social-media-icons a:hover img {
+    filter: brightness(1.2); /* Shinning!!!*/
+}
+
+/* Contact */
+.contact-info {
+    margin-top: 20px;
+}
+
+.contact-info h3 {
+    font-family: "Protest Strike", sans-serif; 
+    color: var(--accent-color);
+}
+
+.contact-info p {
+    font-family: 'Lora', serif; 
+    font-weight: 400;
+    color: var(--accent2-color);
+}

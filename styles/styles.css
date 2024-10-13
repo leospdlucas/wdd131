@@ -4,7 +4,7 @@
     box-sizing: border-box;
 }
 
-:root{
+:root {
     --heading-background-color: #f06;
     --heading-text-color: #333;
     --heading-font: 'Monserrat', Helvetica, sans-serif;
@@ -12,7 +12,7 @@
     --border: 1px solid rgba(0,0,0,0.1);
 }
 
-nav{
+nav {
     background-color: steelblue;
     padding: 10px;
 }
@@ -81,7 +81,7 @@ footer {
 
 /* Class Selectors */
 
-.box{
+.box {
     background-color: #ddd;
     color: #000;
     padding: var(--padding);
