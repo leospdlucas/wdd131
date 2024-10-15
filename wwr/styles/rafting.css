@@ -131,6 +131,10 @@ article img {
 /* Sections */
 section {
     padding: 40px 20px;
+    display: grid;
+    grid-template-columns: 4fr 1fr 4fr;
+    gap: 20px;
+    align-items: center;
 }
 
 /* Applying Protest Strike font */
@@ -139,6 +143,7 @@ section h2 {
     margin-bottom: 15px;
     font-family: "Protest Strike", sans-serif;
     color: var(--secondary-color); 
+    text-align: center;
 }
 
 /* Applying Lora font*/
@@ -146,19 +151,61 @@ section p {
     font-family: 'Lora', serif;
     font-weight: 400; 
     color: var(--primary-color);
+    text-align: left;
 }
 
 section img {
-    max-width: 150px;
-    margin: 5px;
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;   
+}
+
+/* Adventure section */
+.adventures {
+    padding: 40px 20 px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.adventures h2 {
+    grid-column: 1 / -1;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-family: "Protest Strike", sans-serif;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.adventures figure{
+    text-align: center;
+}
+
+.adventures img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.adventures figcaption{
+    font-size: 1rem;
+    font-weight: 900;
+    font-family: Lora, sans-serif;
+    margin-bottom: 5px;
+    color: var(--primary-color);
 }
 
 /* Footer */
 footer {
     background-color: var(--primary-color); 
     padding: 20px;
-    text-align: center;
+    display: flex;
     color: var(--accent2-color); 
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
 }
 
 footer p {
@@ -166,6 +213,7 @@ footer p {
 }
 
 .social-media-icons a {
+   display: inline-block;
     margin: 0 10px;
 }
 
@@ -175,21 +223,5 @@ footer p {
 }
 
 .social-media-icons a:hover img {
-    filter: brightness(1.2); /* Shinning!!!*/
-}
-
-/* Contact */
-.contact-info {
-    margin-top: 20px;
-}
-
-.contact-info h3 {
-    font-family: "Protest Strike", sans-serif; 
-    color: var(--accent-color);
-}
-
-.contact-info p {
-    font-family: 'Lora', serif; 
-    font-weight: 400;
-    color: var(--accent2-color);
+    filter: brightness(2.5); /* Shinning!!!*/
 }
