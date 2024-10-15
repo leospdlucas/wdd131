@@ -37,7 +37,8 @@ body {
 header {
     background-color: var(--secondary-color); 
     padding: 20px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 0.4fr 1fr auto 1fr auto ;
     justify-content: space-between;
     align-items: center;
     color: white;
@@ -62,7 +63,7 @@ nav a:hover {
 
 /* Search Box */
 .search-box {
-    display: flex;
+    display: grid;
     align-items: center;
 }
 
