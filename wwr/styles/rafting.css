@@ -2,7 +2,7 @@
 :root {
     --primary-color: #01161E;
     --secondary-color: #124559;
-    --tertiary-color: #dda150;
+    --tertiary-color: #598392;
     --accent-color: #dda150;     
     --accent2-color: #eee0cb;
 }
@@ -48,16 +48,30 @@ header {
     max-width: 150px;
 }
 
+h1 {
+    text-size: 2rem;
+    text-align: center;
+    font-family: "Protest Strike", sans-serif;
+    color: var(--accent2-color);
+}
+
 /* Nav */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
 nav a {
-    color: white;
+    color: var(--accent2-color);
     text-decoration: none;
     margin: 0 15px;
     font-weight: 700;
 }
 /* Mouse hovering over...*/
 nav a:hover {
-    color: var(--tertiary-color);
+    color: var(--accent-color);
     text-decoration: underline;
 }
 
@@ -116,7 +130,7 @@ article {
     bottom: 20px;
     right: 20px;
     max-width: 800px;
-    background-color: var(--tertiary-color); 
+    background-color: var(--accent-color); 
     padding: 10px;
     border-radius: 8px;
     color: var(--primary-color);
