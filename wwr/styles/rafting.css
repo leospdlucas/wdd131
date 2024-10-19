@@ -236,6 +236,7 @@ footer p {
     height: auto;
 }
 
+/* Shinning!!!*/
 .social-media-icons a:hover img {
-    filter: brightness(2.5); /* Shinning!!!*/
+    filter: brightness(2.5); 
 }
