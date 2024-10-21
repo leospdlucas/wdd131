@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/poll-form.css">
+    <title>WDD 130 | HTML Form - User Poll</title>
+</head>
+
+<body>
+    <header>
+        <h1>WDD 130 | Leonardo Lucas | HTML Form - User Poll</h1>
+
+    </header>
+
+    <main>
+        <form>
+            <fieldset>
+                <legend>Contact Information</legend>
+                
+                <div class="form-item column2">
+                    <label>Full Name: <input type="text" name="fullname"></label>
+                </div>
+
+                <div class="form-item column2">
+                    <label>Email: <input type="email" name="usermail">
+                </div>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Questions</legend>
+
+                <div class="form-item column1">
+                    <label for="browser">What is your favorite internet browser?</label>
+                    <select id="browser" name="browser">
+                        <option value="Chrome">Chrome</option>
+                        <option value="Firefox">Firefox</option>
+                        <option value="Safari">Safari</option>
+                        <option value="Edge">Edge</option>
+                        <option value="Opera">Brave</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-item column1">
+                    <label for="pet">Do you have a household pet? </label>
+                    <input type="checkbox" id="pet" name="pet">
+                </div>
+                
+                <label for="feedback"> List the places you have lived: </label>
+                <textarea id="feedback" name="feedback" rows="4" placeholder="Rio de Janeiro Brazil, Pará Brazil"></textarea> 
+            </fieldset>
+
+            <button type="submit">Submit Poll</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 | HTML Form - User Poll Activity | Leonardo Lucas. All rights reserved.</p>
+
+        <div class="social-media-icons">
+            <a href="https://facebook.com"><img src="images/icon-logo-facebook.webp" alt="Facebook"></a>
+            <a href="https://x.com"><img src="images/icon-logo-X.webp" alt="X"></a>
+            <a href="https://instagram.com"><img src="images/icon-logo-instagram.webp" alt="Instagram"></a>
+        </div>
+
+    </footer>
+
+</body>
+</html>
