@@ -3,7 +3,7 @@
     --primary-color: #01161E;
     --secondary-color: #124559;
     --tertiary-color: #598392;
-    --accent-color: #dda150;     
+    --accent-color: #dda150;
     --accent2-color: #eee0cb;
 }
 
@@ -12,6 +12,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /*Text Font*/
 .protest-strike-regular {
     font-family: "Protest Strike", sans-serif;
@@ -20,25 +21,25 @@
 }
 
 .lora {
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body {
     font-family: 'Lora', serif;
-    color: var(--primary-color); 
+    color: var(--primary-color);
     background-color: var(--accent2-color);
     line-height: 1.6;
 }
 
 /* Styles for the header */
 header {
-    background-color: var(--secondary-color); 
+    background-color: var(--secondary-color);
     padding: 20px;
     display: grid;
-    grid-template-columns: 0.4fr 1fr auto 1fr auto ;
+    grid-template-columns: auto auto auto 1fr auto;
     justify-content: space-between;
     align-items: center;
     color: white;
@@ -49,7 +50,7 @@ header {
 }
 
 h1 {
-    text-size: 2rem;
+    font-size: 2rem;
     text-align: center;
     font-family: "Protest Strike", sans-serif;
     color: var(--accent2-color);
@@ -60,15 +61,17 @@ nav {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 nav a {
     color: var(--accent2-color);
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 20px;
     font-weight: 700;
+    font-size: 1.1rem;
 }
+
 /* Mouse hovering over...*/
 nav a:hover {
     color: var(--accent-color);
@@ -77,8 +80,11 @@ nav a:hover {
 
 /* Search Box */
 .search-box {
-    display: grid;
+    display: flex;
     align-items: center;
+    gap: 10px;
+    background-color: white;
+    border-radius: 8px;
 }
 
 .search-input {
@@ -105,7 +111,6 @@ nav a:hover {
 .hero {
     position: relative;
     text-align: center;
-    color: white;
 }
 
 .hero img {
@@ -119,9 +124,9 @@ nav a:hover {
     top: 10px;
     left: 400px;
     font-size: 4rem;
-    font-family: "Protest Strike", sans-serif; 
-    background-color: rgba(0, 0, 0, 0.5); 
-    padding: 10px;
+    font-family: "Protest Strike", sans-serif;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 15px;
     border-radius: 5px;
 }
 
@@ -130,7 +135,7 @@ article {
     bottom: 20px;
     right: 20px;
     max-width: 800px;
-    background-color: var(--accent-color); 
+    background-color: var(--accent-color);
     padding: 10px;
     border-radius: 8px;
     color: var(--primary-color);
@@ -156,14 +161,14 @@ section h2 {
     font-size: 2rem;
     margin-bottom: 15px;
     font-family: "Protest Strike", sans-serif;
-    color: var(--secondary-color); 
+    color: var(--secondary-color);
     text-align: center;
 }
 
 /* Applying Lora font*/
 section p {
     font-family: 'Lora', serif;
-    font-weight: 400; 
+    font-weight: 400;
     color: var(--primary-color);
     text-align: left;
 }
@@ -171,12 +176,12 @@ section p {
 section img {
     max-width: 250px;
     margin: 0 auto;
-    display: block;   
+    display: block;
 }
 
 /* Adventure section */
 .adventures {
-    padding: 40px 20 px;
+    padding: 40px 20px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
@@ -193,7 +198,7 @@ section img {
     text-align: center;
 }
 
-.adventures figure{
+.adventures figure {
     text-align: center;
 }
 
@@ -203,7 +208,7 @@ section img {
     display: block;
 }
 
-.adventures figcaption{
+.adventures figcaption {
     font-size: 1rem;
     font-weight: 900;
     font-family: Lora, sans-serif;
@@ -213,21 +218,21 @@ section img {
 
 /* Footer */
 footer {
-    background-color: var(--primary-color); 
+    background-color: var(--primary-color);
     padding: 20px;
     display: flex;
-    color: var(--accent2-color); 
+    color: var(--accent2-color);
     justify-content: space-around;
     align-items: center;
     text-align: center;
 }
 
 footer p {
-    color: var(--accent2-color); 
+    color: var(--accent2-color);
 }
 
 .social-media-icons a {
-   display: inline-block;
+    display: inline-block;
     margin: 0 10px;
 }
 
@@ -238,5 +243,266 @@ footer p {
 
 /* Shinning!!!*/
 .social-media-icons a:hover img {
-    filter: brightness(2.5); 
+    filter: brightness(2.5);
+}
+
+/* Contact Us Style */
+.div-top {
+    position: relative;
+}
+
+/*border control - overflow*/
+.div-top img {
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+}
+
+.div-top h1 {
+    position: absolute;
+    top: 40%;
+    left: 56%;
+    font-size: 3rem;
+    font-family: "Protest Strike", serif;
+    padding: 25px;
+    border-radius: 5px;
+    color: var(--secondary-color);
+}
+
+.div-top p {
+    position: absolute;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-family: 'Lora', serif;
+    top: 60%;
+    left: 58%;
+}
+
+#box-top {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 5px;
+}
+
+#box-top div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    padding: 20px;
+    background-color: var(--accent-color);
+    border-radius: 8px;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+#box-top h3 {
+    font-size: 1.8rem;
+    font-family: "Protest Strike", sans-serif;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+#box-top div p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    font-family: "Lora", serif;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+#box-top div img {
+    max-width: 25px;
+    height: auto;
+}
+
+#box-top div button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Lora", serif;
+    font-size: 1.1rem;
+}
+
+#box-top div button:hover {
+    background-color: var(--tertiary-color);
+}
+
+#map-box {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 5px;
+}
+
+#map-box address,
+#map-box p {
+    font-family: 'Lora', sans-serif;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-left: 20px;
+}
+
+#map-box div iframe {
+    display: grid;
+    border: 2px solid var(--tertiary-color);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.h2-team-box {
+    text-align: center;
+}
+
+.h2-team-box h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: "Protest Strike", sans-serif;
+    color: var(--secondary-color);
+}
+
+#team-box {
+    display: flex;
+    justify-items: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#team-box div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-items: center;
+    width: 100%;
+    height: auto;
+}
+
+#team-box div figure {
+    text-align: center;
+    max-width: 100%;
+}
+
+#team-box div figure img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+#team-box div figure figcaption {
+    font-size: 1rem;
+    font-weight: 900;
+    font-family: Lora, sans-serif;
+    margin-top: 10px;
+    color: var(--primary-color);
+}
+
+.text-form {
+    text-align: center;    
+}
+
+.text-form h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    font-family: "Protest Strike", sans-serif;
+    color: var(--secondary-color);
+}
+
+.text-form p {
+    font-size: 1.2rem;
+    font-family: 'Lora', serif;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+/*Form*/
+#form-box {
+    padding: 50px 20px;
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.contact-form {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: var(--tertiary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.form-item {
+    grid-template-columns: auto auto;
+}
+
+.form-item label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.form-item input,
+.form-item textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--tertiary-color);
+    border-radius: 5px;
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    transition: border-color 0.3;
+    justify-items: left;
+}
+
+.form-item input:focus,
+.form-item textarea:focus {
+    border-color: var(--secondary-color);
+}
+
+.form-item button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3;
+}
+
+.form-item button:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+.form-item fieldset {
+    border: 2px solid var(--tertiary-color);
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.form-item legend {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.form-item fieldset label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form-item input[type="checkbox"] {
+    margin-right: 5px;
+    vertical-align: bottom;
 }
