@@ -37,7 +37,7 @@ body {
 /* Styles for the header */
 header {
     background-color: var(--secondary-color);
-    padding: 20px;
+    padding: 10px;
     display: grid;
     grid-template-columns: auto auto auto 1fr auto;
     justify-content: space-between;
@@ -426,19 +426,19 @@ footer p {
 #form-box {
     padding: 50px 20px;
     display: grid;
-    gap: 20px;
+    gap: 25px;
     width: 100%;
     align-items: center;
 }
 
 .contact-form {
-    margin: 20px 0;
-    padding: 20px;
+    padding: 10px;
     background-color: var(--tertiary-color);
     border: 1px solid var(--secondary-color);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     color: white;
+    width: 700px;
 }
 
 .form-item {
@@ -505,4 +505,222 @@ footer p {
 .form-item input[type="checkbox"] {
     margin-right: 5px;
     vertical-align: bottom;
+}
+
+/*Index and Trips Styles*/
+/*Slideshow*/
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 95%;
+    height: 480px;
+    overflow: hidden;
+    margin: 10px auto;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    text-align: center;
+}
+
+.slide-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.slide-img img {
+    width: 49%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide figcaption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    font-family: "Lora", serif ;
+    width: 80%;
+    color: var(--accent2-color);
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    font-size: 2rem;
+    padding: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+@keyframes slideshow {
+    0%, 20% { opacity: 1; }
+    25%, 100% { opacity: 0; }
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+/*Display Time control*/
+.slide:nth-child(1) {animation: slideshow 50 infinite; animation-delay: 0s; }
+.slide:nth-child(2) {animation: slideshow 50 infinite; animation-delay: 10s; }
+.slide:nth-child(3) {animation: slideshow 50 infinite; animation-delay: 20s; }
+.slide:nth-child(3) {animation: slideshow 50 infinite; animation-delay: 30s; }
+.slide:nth-child(3) {animation: slideshow 50 infinite; animation-delay: 40s; }
+
+.newsletter {
+    padding: 40px 20px;
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.newsletter h2 {
+    font-family: 'Protest Strike', sans-serif;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    grid-row: 1;
+}
+
+.newsletter p {
+    grid-row: 2;
+}
+
+.newsletter-form {
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+    grid-column: 2;
+}
+
+.newsletter-form label {
+    font-family: 'Lora', serif;
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-align: left;
+}
+
+.newsletter-form input[type="text"],
+.newsletter-form input[type="email"] {
+    padding: 10px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+.newsletter-form button {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Lora', serif;
+}
+
+.newsletter-form button:hover {
+    background-color: darken(var(--accent-color), 10%);
+}
+
+/* CSS Grid Layout for Site Info Section */
+.site-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.grid-item.image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.grid-item.content {
+    padding: 20px;
+    background-color: var(--accent2-color);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.grid-item.content h3 {
+    font-family: 'Protest Strike', sans-serif;
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.grid-item.content p {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.title-trips {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    color: var(--primary-color);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.title-trips h2 {
+    font-family: 'Protest Strike', sans-serif;
+    font-size: 2rem;
+    color: var(--secondary-color);
+}
+
+.title-trips p {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+}
+
+.title-trips button {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Lora', serif;
+    transition: background-color 0.3;
+    margin-top: 10px;
+    font-size: 2rem;
+}
+
+html{
+    scroll-behavior: smooth;
 }

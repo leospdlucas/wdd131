@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Discover thrilling whitewater rafting adventures with WhiteWater Rafting. Explore our destinations, book trips, and enjoy the excitement of wild waters with top-notch safety and fun.">
+        <title>Adventures | WhiteWater Rafting</title>
+    
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    
+        <link rel="stylesheet" href="styles/rafting.css">
+    </head>
+
+    <body>
+        <header>
+            <a href="index.html">
+                <img src="images/whitewater-header-logo.png" alt="logo" class="logo">
+            </a>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About us</a>
+                <a href="trips.html">Adventures</a>
+                <a href="contact.html">Contact us</a>
+            </nav>
+            
+            <!-- Additional content -->
+            <div class="search-box"></div> 
+                <input type="text" placeholder="Search..." name="search" class="search-input">
+                <button type="submit" class="search-button">Search</button>
+            </div>
+        </header>
+        
+        <main>
+            <div class="title-trips">
+                <h2>BOOK A TRIP</h2>
+                <p>Reservations can be made below with our booking widgets or via phone by calling 800-892-9223. Reservations made online require at least 3 days advanced notice. Some dates are unavailable if fully booked.</p>
+                <button type="submit" onclick="window.location.href='contact.html#contact-form';">Book Now!</button>
+            </div>
+            
+            <div class="slideshow-container">
+                <figure class="slide">
+                    <!--Rafting-->
+                    <div class="slide-img">
+                        <img src="images/rafting-group.jpg" alt="Rafting">
+                        <img src="images/night.webp" alt="Night Rafting">
+                    </div>
+                    <figcaption>
+                        <h3>Choose your Adventue!</h3>
+                        <p>Embark on an unforgettable rafting adventure, whether you prefer the excitement of the day or the thrill of navigating under the stars at night!</p>
+                    </figcaption>
+                </figure>
+
+                <!--Kayak-->
+                <figure class="slide">
+                    <div class="slide-img">
+                        <img src="images/kayak-solo.jpg" alt="Kayak Solo">
+                        <img src="images/kayak-group.jpg" alt="Kayak Group">
+                    </div>
+                    <figcaption>
+                        <h3>Kayak</h3>
+                        <p>Experience the freedom of solo kayaking or share the excitement with friends on a group adventure—your perfect kayaking journey awaits!</p>
+                    </figcaption>
+                </figure>
+                
+                <!--Stand up Paddle-->
+                <figure class="slide">
+                    <div class="slide-img">
+                        <img src="images/standup.jpg" alt="Stand-Up Paddle Solo">
+                        <img src="images/standup-group.jpg" alt="Stand-Up Paddle Group">
+                    </div>
+                    <figcaption>
+                        <h3>Stand Up Paddle </h3>
+                        <p>Enjoy the thrill of Stand Up Paddleboarding, whether you're gliding solo or joining a group for a shared adventure on the water!</p>
+                    </figcaption>
+                </figure>
+
+                <!--Nav Arrows-->
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+
+                <!-- Applying javascript onn HTML... For now-->
+                <script>
+                    let currentIndex = 0;
+                    const slides = document.querySelectorAll('.slide');
+            
+                    function showSlide(index) {
+                        slides.forEach((slide, i) => {
+                            slide.style.opacity = (i === index) ? '1' : '0';
+                            slide.classList.toggle('active', i === index);
+                        });
+                    }
+            
+                    function changeSlide(n) {
+                        currentIndex = (currentIndex + n + slides.length) % slides.length;
+                        showSlide(currentIndex);
+                    }
+            
+                    showSlide(currentIndex);
+            
+                    setInterval(() => changeSlide(1), 10000);
+                </script>
+            </div>
+
+            <div class="title-trips">
+                <h2>Limited...</h2>
+                <p>I would like to implement 1 slideshow fo each place shown in the Home Page, but the page would be huge!</p>
+            </div>
+
+        </main>
+
+        <footer>             <!-- Additional content in progress -->
+            <p>&copy; 2024 WhiteWater Rafting - Leonardo Lucas. All rights reserved.</p>
+
+            <div class="social-media-icons">
+                <a href="https://facebook.com"><img src="images/icon-logo-facebook.webp" alt="Facebook"></a>
+                <a href="https://x.com"><img src="images/icon-logo-X.webp" alt="X"></a>
+                <a href="https://instagram.com"><img src="images/icon-logo-instagram.webp" alt="Instagram"></a>
+            </div>
+        </footer>
+    </body>
+</html>
