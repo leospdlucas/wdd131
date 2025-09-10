@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
-        <title>Leonardo Lucas | WDD 130</title>
-        <meta name="description" content="Leonardo Lucas | WDD 130 | Portfolio">
-        <meta name="author" content="Leonardo Lucas">
-        <link rel="stylesheet" href="styles/styles.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WDD 131 – Dynamic Web Fundamentals – Leonardo Lucas</title>
+    <meta name="description" content="WDD 131 – Dynamic Web Fundamentals, Leonardo Lucas, course landing page with navigation, cards, and dynamic dates." />
+    <meta name="author" content="Leonardo Lucas" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <script src="scripts/getdates.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <span id="course-title">WDD 131 – Dynamic Web Fundamentals</span>
+      <nav class="site-nav">
+        <a href="https://www.linkedin.com/in/leonardospdlucas/" rel="noopener noreferrer">LinkedIn</a>
+        <a href="https://byupw.instructure.com/" rel="noopener noreferrer">Canvas</a>
+        <a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" rel="noopener noreferrer">Favorite Scripture</a>
+        <a href="final-project/" rel="noopener noreferrer">Final Project</a>
+      </nav>
+    </header>
 
-    </head>
-    <body>
-        <header>
-            <nav>
-                <a href="#">Home</a>
-                <a href="wwr/">Rafting Website</a>
-                <a href="wwr/site-plan-rafting.html">Rafting Site Plan</a>
-                <a href="https://www.linkedin.com/in/leonardospdlucas//">LinkedIn</a>
-                <a href="https://facebook.com">Facebook</a>
-            </nav>
-        </header>
-        
-        <main>
-            <h1>Leonardo Lucas | WDD 130</h1>
-            <img src="images/profile.png" alt="Hi, I'm Leonardo Lucas">
-            <p></p>
-                My name is Leonardo Lucas. Married with no children. I'm from Rio de Janeiro, Brazil. I'm a Systems Analytic. I've been exploring the world of photography since I was a child and have always been fascinated by capturing the beauty and uniqueness of different cultures and landscapes.
-            </p>
-            <ul class="box">
-                <li><a href="https://churchofjesuschristtemples.org/rio-de-janeiro-brazil-temple/" target="_blank">Rio de Janeiro Brazil Temple</a></li>
-                <li><a href="https://churchofjesuschristtemples.org/belem-brazil-temple/" target="_blank">Belem Brazil Temple</a></li>
-                <li><a href="https://churchofjesuschristtemples.org/buenos-aires-argentina-temple/" target="_blank">Buenos Aires Argentina Temple</a></li>
-            </ul>
-        </main>
+    <main>
+      <h1>Leonardo Lucas</h1>
 
-        <aside class="box">
-            <h2>Rio de Janeiro</h2>
-            <img src="images/rio-de-janeiro.jpg" alt="Rio de Janeiro">
-            <p>Rio de Janeiro is a bustling metropolis with a rich history and vibrant culture. It's known for its iconic landmarks like the Corcovado and the Copacabana. The city is also home to numerous beaches, attractions, and nightlife.</p>
-        </aside>
+      <section class="card">
+        <h2>About Me</h2>
+        <img src="images/profile.jpg" alt="Portrait placeholder for Leonardo Lucas" width="320" height="320" />
+        <p>
+          I'm a Systems Analyst from Rio de Janeiro, Brazil. I enjoy building modern web apps and exploring good design and typography.
+          This page follows course standards for structure (semantic HTML), layout (CSS Grid/Flex), and progressive enhancement.
+        </p>
+      </section>
 
-        <footer>
-            <p>&copy; 2024 Leonardo Lucas 😎👍 Rio de Janeiro 🌊🌞</p>
-        </footer>
-    </body>
+      <section class="card">
+        <h2>Course Resources</h2>
+        <img src="images/resources.png" alt="Course resources placeholder image" width="320" height="200" />
+        <ul>
+          <li>Standards-compliant HTML head elements and metadata</li>
+          <li>Responsive navigation using CSS Flex</li>
+          <li>Card layout using CSS Grid</li>
+          <li>Dynamic dates powered by JavaScript</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="currentyear"></span> Leonardo Lucas • Brazil</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
 </html>

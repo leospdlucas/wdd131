@@ -1,0 +1,126 @@
+/* Base styles for WDD 131 landing page */
+:root {
+  --bg: #0f172a;
+  --panel: #111827;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #38bdf8;
+  --radius: 16px;
+  --gap: 1rem;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #0b1220 0%, #0f172a 100%);
+  line-height: 1.6;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+header {
+  padding: 1.25rem 1rem .75rem;
+  display: grid;
+  gap: .75rem;
+  justify-items: center;
+  background: rgba(255,255,255,0.02);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+}
+
+#course-title {
+  display: block; /* required by spec */
+  font-family: Merriweather, Georgia, 'Times New Roman', serif;
+  font-size: clamp(1.1rem, 1.5vw + .8rem, 1.6rem);
+  font-weight: 700;
+  letter-spacing: .2px;
+  text-align: center;
+}
+
+.site-nav {
+  display: flex;                /* flex navigation required */
+  gap: .75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.site-nav a {
+  text-decoration: none;
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid rgba(255,255,255,.06);
+  padding: .55rem .9rem;
+  border-radius: 999px;
+  transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+  will-change: transform;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+  background: #0b1324;
+  box-shadow: 0 6px 18px rgba(56, 189, 248, .25), inset 0 0 0 1px var(--accent);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+main {
+  width: min(100%, 960px);      /* limited width and centered */
+  margin-inline: auto;
+  padding: 2rem 1rem 3rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.card h2 {
+  font-size: clamp(1.1rem, 1.2vw + .8rem, 1.5rem);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: calc(var(--radius) - 4px);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.card ul { padding-left: 1.25rem; }
+.card li { color: var(--muted); }
+
+@media (min-width: 720px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* grid layout for cards */
+    align-items: start;
+  }
+  .card {
+    grid-template-columns: 1fr;
+  }
+  main > h1 {
+    grid-column: 1 / -1;
+  }
+}
+
+h1 {
+  font-size: clamp(1.4rem, 2vw + 1rem, 2rem);
+  font-weight: 700;
+  letter-spacing: .3px;
+}
+
+footer {
+  text-align: center;
+  padding: 1.25rem 1rem 2rem;
+  color: var(--muted);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
