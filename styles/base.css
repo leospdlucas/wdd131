@@ -1,4 +1,4 @@
-/* Base styles for WDD 131 landing page */
+/* Base styles */
 :root {
   --bg: #0f172a;
   --panel: #111827;
@@ -32,7 +32,7 @@ header {
 }
 
 #course-title {
-  display: block; /* required by spec */
+  display: block;
   font-family: Merriweather, Georgia, 'Times New Roman', serif;
   font-size: clamp(1.1rem, 1.5vw + .8rem, 1.6rem);
   font-weight: 700;
@@ -41,7 +41,7 @@ header {
 }
 
 .site-nav {
-  display: flex;                /* flex navigation required */
+  display: flex;
   gap: .75rem;
   flex-wrap: wrap;
   justify-content: center;
@@ -67,7 +67,7 @@ header {
 }
 
 main {
-  width: min(100%, 960px);      /* limited width and centered */
+  width: min(100%, 960px);  
   margin-inline: auto;
   padding: 2rem 1rem 3rem;
   display: grid;
@@ -101,7 +101,7 @@ main {
 @media (min-width: 720px) {
   main {
     display: grid;
-    grid-template-columns: 1fr 1fr;  /* grid layout for cards */
+    grid-template-columns: 1fr 1fr;
     align-items: start;
   }
   .card {
