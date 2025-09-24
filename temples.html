@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Temple Album</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css" media="(min-width: 48rem)">
+
+    <!-- JS -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <h1>Temple Album</h1>
+        </div>
+
+        <button id="hamburger" class="hamburger" aria-label="Open navigation" aria-controls="primary-nav"
+            aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="primary-nav" class="navigation" aria-label="Primary">
+            <a href="#">Home</a>
+            <a href="#" data-filter="old">Old</a>
+            <a href="#" data-filter="new">New</a>
+            <a href="#" data-filter="large">Large</a>
+            <a href="#" data-filter="small">Small</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>My Temple Gallery</h2>
+
+        <section class="gallery" id="gallery">
+            <figure>
+                <img src="images/Templo de Albuquerque New Mexico.jpg" width="640" height="426" alt="Albuquerque Temple">
+                <figcaption>Albuquerque - New Mexico</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Templo de Boston Massachusetts.jpg" width="640" height="426" alt="Boston Temple">
+                <figcaption>Boston Massachusetts Temple</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Templo de Bountiful Utah.jpg" width="640" height="426" alt="Bountiful Temple">
+                <figcaption>Bountiful - Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Templo de Fort Lauderdale Florida.jpg" width="640" height="426" alt="Fort Lauderdale Temple">
+                <figcaption>Fort Lauderdale - Florida</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Templo de Gilbert Arizona.jpg" width="640" height="426" alt="Gilbert Temple">
+                <figcaption>Gilbert - Arizona</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Templo de Laie Hawaii.jpg" width="640" height="426" alt="Laie Temple">
+                <figcaption>Laie - Hawaii</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Templo de Logan Utah.jpg" width="640" height="426" alt="Logan Temple">
+                <figcaption>Logan - Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Templo de Manti Utah.jpg" width="640" height="426" alt="Manti Temple">
+                <figcaption>Manti - Utah</figcaption>
+            </figure>
+            <figure>
+                <img src="images/Templo de Oquirrh Mountain, Utah.jpg" width="640" height="426" alt="Oquirrh Temple">
+                <figcaption>Oquirrh Mountain - Utah</figcaption>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Leonardo Lucas • Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

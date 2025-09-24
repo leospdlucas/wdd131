@@ -1,0 +1,50 @@
+/* This file only loads when min-width ≥ 48rem */
+
+.site-header {
+    grid-template-columns: auto 1fr auto;
+    /* title | nav | (hidden)hamburger */
+}
+
+
+/* Hide hamburger on large screens */
+.hamburger {
+    display: none;
+}
+
+
+/* Show nav and layout horizontally with Flex */
+.navigation {
+    display: flex !important;
+    /* always visible on large screens */
+    grid-column: auto;
+    justify-self: center;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0;
+}
+
+.navigation a {
+    padding: 0.5rem 0.9rem;
+}
+
+
+/* Main: increase max width */
+main {
+    max-width: 64rem;
+    /* 1024px */
+}
+
+main>h2 {
+    font-size: 1.5rem;
+}
+
+
+/* Gallery: switch to responsive columns */
+.gallery {
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.25rem;
+}
+
+.gallery figcaption {
+    font-size: 1rem;
+}
