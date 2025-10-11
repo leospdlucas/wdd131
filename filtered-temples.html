@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Filtered Temples</title>
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <button id="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="site-nav">☰</button>
+      <h1>Temple Picture Album</h1>
+    </div>
+    <nav id="site-nav" class="nav" aria-label="Main">
+      <ul>
+        <li><button class="nav__btn is-active" data-filter="all" aria-pressed="true">Home</button></li>
+        <li><button class="nav__btn" data-filter="old" aria-pressed="false">Old &lt; 1900</button></li>
+        <li><button class="nav__btn" data-filter="new" aria-pressed="false">New &gt; 2000</button></li>
+        <li><button class="nav__btn" data-filter="large" aria-pressed="false">Large &gt; 90k ft²</button></li>
+        <li><button class="nav__btn" data-filter="small" aria-pressed="false">Small &lt; 10k ft²</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="cards" class="cards" aria-live="polite" aria-busy="false">
+      <!-- Cards are injected by JS -->
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="year"></span> • Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <script src="scripts/filtered-temples.js" defer></script>
+</body>
+</html>
