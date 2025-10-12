@@ -55,7 +55,7 @@ header {
   margin: 0
 }
 
-.brand .logo{
+.brand .logo {
   width: 48px;
   height: 48px;
   padding: 0;
@@ -63,28 +63,37 @@ header {
   background: transparent;
   display: grid;
   place-items: center;
-  overflow: hidden; /* crops any oversize edges */
+  overflow: hidden;
+  /* crops any oversize edges */
 }
+
 .brand .logo img,
-.brand .logo svg{
+.brand .logo svg {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: contain;      
+  object-fit: contain;
 }
 
 /* Fallback: if you drop an <img> or <svg> directly inside .brand (no .logo wrapper) */
-.brand > img,
-.brand > svg{
+.brand>img,
+.brand>svg {
   max-height: 48px;
   width: auto;
   height: auto;
   display: block;
 }
 
-@media (min-width: 900px){
-  .brand .logo{ width: 56px; height: 56px; }
-  .brand > img, .brand > svg{ max-height: 56px; }
+@media (min-width: 900px) {
+  .brand .logo {
+    width: 56px;
+    height: 56px;
+  }
+
+  .brand>img,
+  .brand>svg {
+    max-height: 56px;
+  }
 }
 
 .tag {
