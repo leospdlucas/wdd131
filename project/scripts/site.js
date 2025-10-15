@@ -1,3 +1,7 @@
-// Show the document's last updated date in the footer
-const el = document.getElementById('lm');
-if (el) el.textContent = `Last updated: ${document.lastModified}`;
+// Year + last modified
+document.addEventListener('DOMContentLoaded', () => {
+  const y = document.getElementById('currentyear');
+  if (y) y.textContent = new Date().getFullYear();
+  const lm = document.getElementById('lm');
+  if (lm) lm.textContent = `Last updated: ${document.lastModified}`;
+});

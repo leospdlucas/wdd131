@@ -1,10 +1,11 @@
 // Same product list so we can show the chosen product name on the receipt.
 const products = [
-    { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
-    { id: "fc-2050", name: "power laces", averagerating: 4.7 },
-    { id: "fs-1987", name: "time circuits", averagerating: 3.5 },
-    { id: "ac-2000", name: "low voltage reactor", averagerating: 3.9 },
-    { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 },
+  { id: "pic-kg", name: "Picanha", averagerating: 4.9 },
+  { id: "fral-kg", name: "Fraldinha", averagerating: 4.6 },
+  { id: "ass-kg", name: "Assado de Tira", averagerating: 4.7 },
+  { id: "ling-kg", name: "Linguiça Artesanal", averagerating: 4.5 },
+  { id: "cost-kg", name: "Costelinha Suína", averagerating: 4.8 },
+  { id: "fil-kg", name: "Filé de Peito", averagerating: 4.6 }
 ];
 
 const params = new URLSearchParams(location.search);

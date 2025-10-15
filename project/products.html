@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Products — São Gabriel Butcher Shop</title>
+<link rel="icon" href="images/faviconcarne.png" />
+<link rel="stylesheet" href="styles/site.css" />
+<link rel="stylesheet" href="styles/site-large.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="brand"><a href="index.html">São Gabriel Butcher Shop</a></div>
+    <button id="burger" class="burger" aria-controls="site-nav" aria-expanded="false" aria-label="Menu">&#9776;</button>
+    <nav id="site-nav" class="nav" hidden>
+      <a href="index.html">Home</a>
+      <a aria-current="page" href="products.html">Products</a>
+      <a href="deals.html">Deals</a>
+      <a href="place.html">Location</a>
+      <a href="form.html">Review</a>
+    </nav>
+  </header>
+
+  <main id="main" class="container">
+    <h1>Products</h1>
+    <div class="toolbar">
+      <label>Filter: 
+        <select id="filter">
+          <option value="all">All</option>
+          <option value="beef">Beef</option>
+          <option value="pork">Pork</option>
+          <option value="poultry">Poultry</option>
+        </select>
+      </label>
+      <label>Sort by: 
+        <select id="sort">
+          <option value="name">Name (A–Z)</option>
+          <option value="price">Price (low → high)</option>
+        </select>
+      </label>
+      <label><input type="checkbox" id="onlyDeals" /> Deals only</label>
+    </div>
+    <div id="grid" class="cards"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> São Gabriel Butcher Shop · <a href="references.html">References</a></p>
+    <p id="lm"></p>
+  </footer>
+
+  <script src="scripts/site.js" defer></script>
+  <script src="scripts/nav.js" defer></script>
+  <script src="scripts/products.js" defer></script>
+  <script src="scripts/products-page.js" defer></script>
+</body>
+</html>

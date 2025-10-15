@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rio de Janeiro, Brasil</title>
+    <link rel="stylesheet" href="styles/place.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="topbar">
+      <div class="brand"><a href="index.html">São Gabriel Butcher Shop</a></div>
+      <button id="burger" class="burger" aria-controls="site-nav" aria-expanded="false" aria-label="Menu">&#9776;</button>
+      <nav id="site-nav" class="nav" hidden>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="deals.html">Deals</a>
+        <a aria-current="page" href="place.html">Location</a>
+        <a href="form.html">Review</a>
+      </nav>
+    </header>
+    <header class="site-header">
+        <h1 id="place-title">Rio de Janeiro, Brasil</h1>
+    </header>
+
+    <main id="main">
+        <section class="hero" aria-labelledby="place-title">
+            <picture class="hero-media">
+                <!-- WebP responsivo -->
+                <source srcset="
+            images/rio-hero-large.webp 1600w,
+            images/rio-hero-medium.webp 1000w,
+            images/rio-hero-small.webp 600w
+          " type="image/webp" />
+                <img src="images/rio-hero-large.webp"
+                    alt="Vista aérea do Pão de Açúcar e da Baía de Guanabara, Rio de Janeiro" width="1600" height="900"
+                    loading="eager" />
+            </picture>
+
+            <section class="panel data" aria-labelledby="data-title">
+                <h2 id="data-title">Dados</h2>
+                <dl class="kv">
+                    <div>
+                        <dt>País</dt>
+                        <dd>Brasil</dd>
+                    </div>
+                    <div>
+                        <dt>Estado</dt>
+                        <dd>Rio de Janeiro (RJ)</dd>
+                    </div>
+                    <div>
+                        <dt>Região</dt>
+                        <dd>Sudeste</dd>
+                    </div>
+                    <div>
+                        <dt>Coordenadas</dt>
+                        <dd>22,9068° S, 43,1729° O</dd>
+                    </div>
+                    <div>
+                        <dt>Idioma</dt>
+                        <dd>Português (pt-BR)</dd>
+                    </div>
+                    <div>
+                        <dt>Moeda</dt>
+                        <dd>BRL (R$)</dd>
+                    </div>
+                </dl>
+            </section>
+
+            <section class="panel weather" aria-labelledby="weather-title">
+                <h2 id="weather-title" class="weather-title">Clima</h2>
+                <!-- SVG mobile -->
+                <img class="weather-icon" src="images/weather.svg" alt="Ícone de clima" width="48" height="48"
+                    loading="lazy" />
+                <div class="kv">
+                    <div><span class="label">Condições</span><span class="value" id="conditions">Parcialmente
+                            nublado</span></div>
+                    <div><span class="label">Temperatura</span><span class="value"><span id="temperature">28</span>
+                            <span id="temp-unit">°C</span></span></div>
+                    <div><span class="label">Vento</span><span class="value"><span id="wind">15</span> <span
+                                id="wind-unit">km/h</span></span></div>
+                    <div><span class="label">Sensação térmica (vento)</span><span class="value"
+                            id="windchill">N/A</span></div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <footer class="site-footer">
+      <p>&copy; <span id="currentyear"></span> São Gabriel Butcher Shop · <a href="references.html">References</a></p>
+      <p id="lm"></p>
+    </footer>
+    <script src="scripts/site.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
+    <script src="scripts/place.js" defer></script>
+
+
+    <footer class="site-footer">
+        <p>© <span id="currentyear"></span> Rio de Janeiro, RJ – Brasil</p>
+        <p>Última modificação: <span id="lastModified"></span></p>
+    </footer>
+
+    <script src="scripts/place.js" defer></script>
+</body>
+
+</html>
