@@ -1,53 +1,80 @@
 <!doctype html>
 <html lang="en-US">
 <head>
+  <title>Home — São Gabriel Butcher Shop</title>
+  
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>São Gabriel Butcher Shop — Fresh meats & barbecue packs</title>
-<link rel="icon" href="images/faviconcarne.png" />
-<link rel="stylesheet" href="styles/site.css" />
-<link rel="stylesheet" href="styles/site-large.css" />
+<link rel="preload" as="style" href="styles/base.css" />
+<link rel="stylesheet" href="styles/base.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><circle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22%239A1B1B%22/></svg>">
+
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="topbar">
-    <div class="brand"><a href="index.html">São Gabriel Butcher Shop</a></div>
-    <button id="burger" class="burger" aria-controls="site-nav" aria-expanded="false" aria-label="Menu">&#9776;</button>
-    <nav id="site-nav" class="nav" hidden>
-      <a aria-current="page" href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="deals.html">Deals</a>
-      <a href="place.html">Location</a>
-      <a href="form.html">Review</a>
+
+<header>
+  <div class="container navbar">
+    <a class="brand" href="index.html"><span class="logo">SG</span> São Gabriel Butcher Shop</a>
+    <button class="mobile-toggle" aria-label="Menu" id="navToggle">☰</button>
+    <nav id="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Our Products</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
     </nav>
-  </header>
+  </div>
+</header>
 
-  <main id="main" class="container">
-    <section class="hero">
-      <h1>Quality cuts, fair prices</h1>
-      <p>Prime beef, pork, and poultry — perfect for daily meals and epic churrasco.</p>
-      <a class="btn" href="products.html">Browse products</a>
-    </section>
+<main class="container">
+  <section class="hero grid">
+    <div class="card">
+      <picture>
+        <img src="images/products/picanha-top-sirloin-cap.webp" alt="Hero cut of beef" width="1200" height="800" loading="eager" />
+      </picture>
+      <div class="p">
+        <h1>Prime cuts, fair prices — every day.</h1>
+        <p class="small">Fresh beef, pork, and chicken sourced locally and prepared with care. Order online or stop by our shop.</p>
+        <div class="controls">
+          <a class="btn" href="products.html">Shop Products</a>
+          <a class="btn ghost" href="#weather">Today’s Weather</a>
+        </div>
+      </div>
+    </div>
+    <aside class="card">
+      <div class="p">
+        <h2>Store Info</h2>
+        <table class="table">
+          <tr><th>Address</th><td>Avenida Luís de Matos, 41 – Luz, Nova Iguaçu/RJ</td></tr>
+          <tr><th>Hours</th><td>Mon–Sat 8:00–19:00 • Sun 9:00–13:00</td></tr>
+          <tr><th>Phone</th><td>(21) 0000-0000</td></tr>
+        </table>
+        <hr/>
+        <section id="weather" aria-labelledby="weatherTitle">
+          <h2 id="weatherTitle">Weather</h2>
+          <div id="weatherBox" class="small">Loading weather…</div>
+        </section>
+      </div>
+    </aside>
+  </section>
+  <section class="card">
+    <div class="p">
+      <h2>Weekly Specials</h2>
+      <div id="specials" class="products-grid"></div>
+    </div>
+  </section>
+</main>
 
-    <section aria-labelledby="popular-title" class="section">
-      <h2 id="popular-title">Popular Cuts</h2>
-      <div id="popular" class="cards"></div>
-    </section>
+<footer>
+  <div class="container foot">
+    <div>© <span id="year"></span> São Gabriel Butcher Shop • Nova Iguaçu, RJ • Last modified <span id="lastmod"></span></div>
+    <div><a href="references.html" class="badge" rel="nofollow">References</a></div>
+  </div>
+</footer>
+<script src="scripts/main.js" defer></script>
 
-    <section aria-labelledby="deals-title" class="section">
-      <h2 id="deals-title">This Week's Deals</h2>
-      <div id="deals" class="cards"></div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <p>&copy; <span id="currentyear"></span> São Gabriel Butcher Shop · <a href="references.html">References</a></p>
-    <p id="lm"></p>
-  </footer>
-
-  <script src="scripts/site.js" defer></script>
-  <script src="scripts/nav.js" defer></script>
-  <script src="scripts/products.js" defer></script>
-  <script src="scripts/home.js" defer></script>
+<script src="scripts/weather.js" defer></script>
+<script src="scripts/home.js" defer></script>
 </body>
 </html>
