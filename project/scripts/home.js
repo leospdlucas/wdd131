@@ -24,7 +24,7 @@
     if (!b) return;
     const id = b.dataset.id;
     const cart = JSON.parse(localStorage.getItem('sg_cart') || '[]');
-    cart.push({id: Number(id), qty: 1, t: Date.now()});
+    cart.push({ id: Number(id), qty: 1, t: Date.now() });
     localStorage.setItem('sg_cart', JSON.stringify(cart));
     alert('Added to cart!');
   });

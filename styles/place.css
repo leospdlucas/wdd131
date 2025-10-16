@@ -122,9 +122,10 @@ body {
     margin-left: .35rem;
 }
 
-/* === DESKTOP  === */
+/* === DESKTOP (sobreposição no herói) === */
 @media(min-width: 900px) {
 
+    /* todos ocupam a mesma célula, ficando sobre o hero */
     .place {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -153,6 +154,7 @@ body {
         border-left: 6px solid var(--accent);
     }
 
+    /* requisito: ícone via pseudo-elemento após o título */
     .weather-title::after {
         content: " ⛅";
         font-size: 1.25em;
@@ -160,6 +162,7 @@ body {
         margin-left: .15em;
     }
 
+    /* esconder o SVG no desktop */
     .weather.icon-mobile {
         display: none;
     }
